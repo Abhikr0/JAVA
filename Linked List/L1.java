@@ -26,6 +26,9 @@ public class L1 {
             // ab head me daalo value
             head = newNode;
         }
+        void addLast(int data) {
+            
+        }
 
         public static void main(String[] args) {
             L1 ll =new L1();
