@@ -27,7 +27,38 @@ public class L1 {
             head = newNode;
         }
         void addLast(int data) {
-            
+            Node newNode = new Node(data);
+            if (head== null) {
+            head=tail=newNode;
+            return;
+            }
+            tail.next = newNode;
+            tail =newNode;
+        }
+
+        void addMiddle(int idx,int data){
+            Node newNode = new Node(data);
+            Node temp = head;
+            int i = 0;
+            while (i<idx-1) {
+                temp=temp.next;
+                i++;
+            }
+
+            newNode.next=temp.next ;
+            temp.next = newNode; 
+        }
+        void add(int idx,int data){
+            Node newNode = new Node(data);
+            Node temp = head;
+            int i = 0;
+
+            while (i<idx-1) {
+                temp=temp.next;
+                i++;
+            }
+            newNode.next = temp;
+            temp.next= newNode;
         }
 
         public static void main(String[] args) {
