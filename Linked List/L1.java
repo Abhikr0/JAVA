@@ -64,7 +64,12 @@ public class L1 {
             newNode.next = temp.next;
             temp.next= newNode;
         }
+        public int  removeFirst() {
+            int val = head.data;
+            head = head.next;
+            return val;
 
+        }
         public static void main(String[] args) {
             L1 ll =new L1();
             ll.addFirst(2);
