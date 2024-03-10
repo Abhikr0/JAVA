@@ -1,7 +1,6 @@
 public class palpir {
     public static void pyr(int n) {
         for(int i=1;i<=n;i++){
-            int counter=0;
             for(int j=1;j<=n-i;j++){
                 System.out.print(" ");
             }
