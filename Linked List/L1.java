@@ -117,12 +117,28 @@ public class L1 {
         }
         return -1;
     }
-    public int recprint(){
+    public int recPrint(){
         if(head==null){
             return;
         }
-        recprint(head.next);
+        recPrint(head.next);
         System.out.println(head.data);
+    }
+    public int helper(int head,int key) {
+        if (head==null) {
+            return -1;
+        }
+        if (head.data == key) {
+            return 0;
+        }
+        int idx=helper(head.next, key);
+        if (idx==-1) {
+            return -1;
+        }
+        return idx+1;
+    }
+    public int recSer(int key) {
+        helper(head, key);
     }
 
     public static void main(String[] args) {
